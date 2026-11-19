@@ -24,8 +24,8 @@ public class AdPlacer : MonoBehaviour
 
     private void Place()
     {
-        Vector3 location = SpawnTools.RandomLocationWorldSpace();
-        print(location.x + ", " + location.y);
+        
+        
         Instantiate(AdPrefab, SpawnTools.RandomLocationWorldSpace(), Quaternion.identity);
     }
 }
