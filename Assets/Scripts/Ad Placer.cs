@@ -5,6 +5,8 @@ public class AdPlacer : MonoBehaviour
 {
     public GameObject AdPrefab;
     private bool isOkToCreate = true;
+
+    [SerializeField] private GameObject adArea;
     void Update()
     {
         if (isOkToCreate)
@@ -24,8 +26,8 @@ public class AdPlacer : MonoBehaviour
 
     private void Place()
     {
-        
-        
-        Instantiate(AdPrefab, SpawnTools.RandomLocationWorldSpace(), Quaternion.identity);
+        float randomX = Random.Range(-6.5f, 6.5f);
+        float randomY = Random.Range(-4f, 4f);
+        Instantiate(AdPrefab, new Vector3(randomX, randomY, 10), Quaternion.identity);
     }
 }

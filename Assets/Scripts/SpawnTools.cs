@@ -13,7 +13,9 @@ public static class SpawnTools
     public static Vector3 RandomLocationWorldSpace()
     {
         Vector3 randomScreenLocation = RandomLocationScreenSpace();
-        return Camera.main.ScreenToWorldPoint(randomScreenLocation);
+        Vector3 randomScreenLocationCamera = Camera.main.ScreenToWorldPoint(randomScreenLocation);
+        
+        return randomScreenLocationCamera;
     }
 
     public static Vector3 RandomTopOfScreenLocationScreenSpace()
