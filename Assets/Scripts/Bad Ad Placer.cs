@@ -19,7 +19,7 @@ public class BadAdPlacer : MonoBehaviour
     {
         isOkToCreate = false;
         float secondsToWait = Random.Range(GameParameters.BadAdMinSecondsToWait,GameParameters.BadAdMaxSecondsToWait);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(secondsToWait);
         Place();
         isOkToCreate = true;
     }
@@ -27,7 +27,7 @@ public class BadAdPlacer : MonoBehaviour
     private void Place()
     {
         float randomX = Random.Range(-6.5f, 6.5f);
-        float randomY = Random.Range(-4f, 4f);
+        float randomY = Random.Range(-3.5f, 3.5f);
         Instantiate(BadAdPrefab, new Vector3(randomX, randomY, 10), Quaternion.identity);
     }
 }

@@ -19,7 +19,7 @@ public class AdPlacer : MonoBehaviour
     {
         isOkToCreate = false;
         float secondsToWait = Random.Range(GameParameters.AdMinSecondsToWait,GameParameters.AdMaxSecondsToWait);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(secondsToWait);
         Place();
         isOkToCreate = true;
     }
@@ -27,7 +27,7 @@ public class AdPlacer : MonoBehaviour
     private void Place()
     {
         float randomX = Random.Range(-6.5f, 6.5f);
-        float randomY = Random.Range(-4f, 4f);
+        float randomY = Random.Range(-3.5f, 3.5f);
         Instantiate(AdPrefab, new Vector3(randomX, randomY, 10), Quaternion.identity);
     }
 }
