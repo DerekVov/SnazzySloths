@@ -451,6 +451,7 @@ GameObject:
   - component: {fileID: 1247012109}
   - component: {fileID: 1247012108}
   - component: {fileID: 1247012110}
+  - component: {fileID: 1247012111}
   m_Layer: 0
   m_Name: Placer
   m_TagString: Untagged
@@ -500,6 +501,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BadAdPlacer
   BadAdPrefab: {fileID: 4249492728417758851, guid: 1a3ec9d326df345e795c3fc2c44e0e15, type: 3}
+--- !u!114 &1247012111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247012107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659fbbddfddf74e43bc511adc997e403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoodAdPlacer
+  GoodAdPrefab: {fileID: 4249492728417758851, guid: a0a769ae80d0949dbbbfa8a1e6348012, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
