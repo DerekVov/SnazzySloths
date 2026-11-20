@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GoodAd : MonoBehaviour
 {
+    public float destroyRadius = 3f;
     // Starts Coroutine
     public void Start()
     {
@@ -17,7 +18,13 @@ public class GoodAd : MonoBehaviour
 
     void OnMouseDown()
     {
-        // Not only should this destroy the ad it should destroy all parent objects in its radius
-        Destroy(transform.parent.gameObject);
+        // Find all colliders within the radius
+        Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(transform.parent.position, destroyRadius);
+
+        // Destroy all nearby parent objects
+        foreach (Collider2D nearby in nearbyObjects)
+        {
+            Destroy(nearby.transform.parent.gameObject);
+        }
     }
 }

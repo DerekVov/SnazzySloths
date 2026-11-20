@@ -9,7 +9,9 @@ public class GameParameters : MonoBehaviour
     //Bad Ad Spawn Rate
     public static float BadAdMinSecondsToWait = 4f;
     public static float BadAdMaxSecondsToWait = 8f;
-    
+    //Good ad Spawn Rate
+    public static float GoodAdMinSecondsToWait = 5f;
+    public static float GoodAdMaxSecondsToWait = 9f;
     // Virus speed
     // Virus size?
 }
